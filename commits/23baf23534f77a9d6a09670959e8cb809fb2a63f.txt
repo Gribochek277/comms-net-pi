@@ -1,0 +1,15 @@
+repository: serhii/comms-net-pi
+commit: 23baf23534f77a9d6a09670959e8cb809fb2a63f
+date: 2026-07-10T02:28:45+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+Initial commit: coms-net pi-agent communication hub
+Pi-agent-to-pi-agent communication over a lightweight HTTP/SSE hub.
+Includes client extension (TypeScript) and Node.js hub server.
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
