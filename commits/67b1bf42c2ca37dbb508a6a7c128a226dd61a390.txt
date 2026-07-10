@@ -1,0 +1,25 @@
+repository: serhii/comms-net-pi
+commit: 67b1bf42c2ca37dbb508a6a7c128a226dd61a390
+date: 2026-07-10T16:28:48+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+Add Windows platform support to installer
+- Add cross-platform Node installer (install.js) as single source of truth;
+  install.sh reduced to a thin 'exec node install.js' wrapper for backward compat
+- Add bin/coms-net-server.js cross-platform launcher (npm bin entry) so npm
+  generates a working .cmd on Windows; keep bash shim for direct unix use
+- install.js writes bash shim + chmod 0o755 on POSIX, .cmd + .ps1 launchers on
+  Windows (default bin-dir %USERPROFILE%\.pi\bin), with PATH reminder
+- server/coms-net-server.ts: atomicWriteSync now rmSync-then-retry on rename
+  failure (EPERM when target exists on Windows); register SIGBREAK for Windows
+- client/coms-net.ts: skip 0o600 mode gate on win32 (POSIX modes don't apply),
+  so loopback auto-token works; drop 'mode 0600' from error message on Windows
+- package.json: bin entries point at .js files for cross-platform npm install
+- README: document node install.js, Windows launchers, PowerShell env syntax
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
