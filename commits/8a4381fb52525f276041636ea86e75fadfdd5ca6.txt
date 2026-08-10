@@ -1,0 +1,21 @@
+repository: serhii/comms-net-pi
+commit: 8a4381fb52525f276041636ea86e75fadfdd5ca6
+date: 2026-08-10T06:31:23+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+fix: close 006 role delegation + 009 queued_limit SSE
+006 (Role & delegation enforcement):
+- Add standard delegation section to all 5 default SOUL templates
+- Each agent now knows its role and delegation rules in its SOUL.md
+
+009 (Per-agent inbox flow control):
+- Server sends 'queued_limit: target busy' SSE event when cap is hit
+- Client handler populates InboundContext.queued_limit for sender
+- InboundContext type extended with optional queued_limit field
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
