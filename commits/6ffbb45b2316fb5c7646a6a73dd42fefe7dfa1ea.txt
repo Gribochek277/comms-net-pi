@@ -1,0 +1,28 @@
+repository: serhii/comms-net-pi
+commit: 6ffbb45b2316fb5c7646a6a73dd42fefe7dfa1ea
+date: 2026-08-10T06:18:33+03:00
+author: Serhii <36171312+Gribochek277@users.noreply.github.com>
+branches: main
+
+message:
+feat: expand coms-net with swarm support, hub, docs, and Windows installer
+- client/coms-net.ts: major SSE/messaging improvements (~1382 lines)
+- server/coms-net-server.ts: expanded hub with persistence & flow control (~1096 lines)
+- install.js: Windows platform support added
+- .gitignore: added pi swarm runtime artifacts
+- README.md: expanded documentation
+- pi-swarm-hub/: new swarm launcher with config menu (core.sh, hub.sh)
+- pi-swarm-hub/swarms/: default, discuss, iecore swarm configurations
+- .pi/swarm/: conductor, scout, planner, coder, reviewer SOUL templates
+- .pi/discuss/: discussion team SOULs (architect, pm, qa, ux, devops, senior_dev)
+- .pi/skills/: pi-swarm and pi-swarm-hub skill definitions
+- docs/issues/: 11 design docs (identity, dedup, idempotency, persistence, etc)
+- examples/SOUL.md: example agent soul
+- swarm.sh: multi-agent swarm launcher
+- await.txt, sse.txt: protocol notes
+- .opencode/: editor goals state
+
+---
+Source code is NOT published on GitHub.
+README (if any) is available in the repo root.
+If you need the code, email: sergeyalpatov1@gmail.com
